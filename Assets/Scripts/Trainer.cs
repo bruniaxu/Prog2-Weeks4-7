@@ -9,8 +9,13 @@ public class Trainer : MonoBehaviour
     public Camera gameCamera;
     public Color caughtColour;
 
+    public Hider creatureHider;
+
     public List<SpriteRenderer> uncaughtCreatures;
     public List<SpriteRenderer> caughtCreatures;
+
+    //public int x;
+    //public float y;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,10 +55,11 @@ public class Trainer : MonoBehaviour
 
             bool isCreatureCaught = caughtCreatures.Contains(creatureRenderer);
             //if (caughtCreatures.Contains(creatureRenderer))
-            Debug.Log("Is creature caught[" + isCreatureCaught.ToString() + "]");
+            //Debug.Log("Is creature caught[" + isCreatureCaught.ToString() + "]");
 
             if (!isCreatureCaught)
             {
+                creatureHider.Hide();
                 caughtCreatures.Add(creatureRenderer);
             }
 
