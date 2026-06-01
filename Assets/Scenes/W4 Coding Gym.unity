@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26575fadf73a05f469f288662d00a30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clock
-  speed: 30
+  speed: 24
 --- !u!1 &1439209853
 GameObject:
   m_ObjectHideFlags: 0
