@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881099198}
-  - component: {fileID: 881099197}
+  - component: {fileID: 881099199}
   m_Layer: 0
   m_Name: Hour hand
   m_TagString: Untagged
@@ -136,19 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &881099197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881099196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe536a117b319d4c965cf2266513ddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::rotate
-  Speed: 0
 --- !u!4 &881099198
 Transform:
   m_ObjectHideFlags: 0
@@ -158,13 +145,26 @@ Transform:
   m_GameObject: {fileID: 881099196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15978, y: 0.05552, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1439209856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881099199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881099196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26575fadf73a05f469f288662d00a30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Clock
+  speed: 2
 --- !u!1 &995429028
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,10 +435,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326051439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe536a117b319d4c965cf2266513ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 26575fadf73a05f469f288662d00a30f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::rotate
-  Speed: 0
+  m_EditorClassIdentifier: Assembly-CSharp::Clock
+  speed: 30
 --- !u!1 &1439209853
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.33490568, g: 0.5817673, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -524,7 +524,7 @@ Transform:
   m_GameObject: {fileID: 1439209853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15278, y: 0.14348, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.21, z: 0}
   m_LocalScale: {x: 0.030030366, y: 0.6687247, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
