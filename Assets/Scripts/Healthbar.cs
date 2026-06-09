@@ -11,6 +11,8 @@ public class Healthbar : MonoBehaviour
 
     public SpriteRenderer enemyRenderer;
 
+    public AudioSource damageSound;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,10 +34,12 @@ public class Healthbar : MonoBehaviour
         Debug.Log("click["+isMouseClicked+"] OverEnemy["+isMouseOverEnemy+"]");
         if (shouldTakeDamage)
         {
+            damageSound.Play();
             currentHealth -= 5f;
             if (currentHealth < 0f)
             {
-                enemyRenderer.gameObject.SetActive(false);
+                enemyRenderer.enabled = false;
+                //enemyRenderer.gameObject.SetActive(false);
             }
             healthbarFillImage.fillAmount = currentHealth / maxHealth;
         }
